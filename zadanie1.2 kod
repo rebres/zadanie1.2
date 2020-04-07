@@ -1,0 +1,21 @@
+import java.util.Scanner;
+public class zadanie1 {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        String DNA1 = scan.nextLine();
+        String DNA2 = scan.nextLine();
+        int odleglosc = HAMMING(DNA1, DNA2);
+        System.out.print(odleglosc);
+
+}
+    public static int HAMMING(String DNA1, String DNA2){
+        int Hamming = 0;
+    for( int i=0; i< DNA1.length(); i++){
+        if(DNA1.charAt(i) == DNA2.charAt(i)){
+        }else if(DNA1.charAt(i) != DNA2.charAt(i)){
+            Hamming = Hamming + 1;
+        }
+    }
+    return Hamming;
+    }
+}
